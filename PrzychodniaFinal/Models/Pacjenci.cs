@@ -41,11 +41,5 @@ namespace PrzychodniaFinal.Models
         [MaxLength(100)]
         [Display(Name = "Adres")]     
         public string AdresZamieszkania { get; set; }
-        public virtual ICollection<Choroby> Chorobies { get; set; }
-        public virtual ICollection<Recepty> Recepties { get; set; }
-        public Pacjenci()
-        {
-            Chorobies = new HashSet<Choroby>();
-        }
     }
 }
