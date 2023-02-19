@@ -1,13 +1,13 @@
 ﻿@model PrzychodniaFinal.Models.Pracownicy
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Szczegóły pracownika";
 }
 
-<h1>Details</h1>
+<h1>Szczegóły pracownika</h1>
 
 <div>
-    <h4>Pracownicy</h4>
+    <h4>Pracownik</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -49,6 +49,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.PracownicyID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.PracownicyID">Edytuj</a> |
+    <a asp-action="Index">Powrót</a>
 </div>

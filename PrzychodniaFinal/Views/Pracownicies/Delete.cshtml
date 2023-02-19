@@ -1,12 +1,12 @@
 ﻿@model PrzychodniaFinal.Models.Pracownicy
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Usuń pracownika";
 }
 
-<h1>Delete</h1>
+<h1>Usuń pracownika</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Czy na pewno chcesz usunąć pracownika?</h3>
 <div>
     <h4>Pracownicy</h4>
     <hr />
@@ -51,7 +51,7 @@
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="PracownicyID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index">Powrót</a>
     </form>
 </div>

@@ -7,7 +7,7 @@
 
 <p>
     <a asp-action="Create">
-        <button class="btn dodaj">
+        <button class="btn btn-success">
             <span class="glyphicon glyphicon-edit"></span> Dodaj
         </button>
     </a>
@@ -16,7 +16,7 @@
 {
     <p>
         Wyszukaj: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" />
+        <input type="submit" value="Wyszukaj" class="btn btn-outline-primary" />
     </p>
 }
 <table class="table">
@@ -67,18 +67,18 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.PracownicyID">
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-edit"></span> Edit
+                        <button type="button" class="btn btn-outline-success">
+                            <span class="glyphicon glyphicon-edit"></span> Edytuj
                         </button>
                     </a> |
                     <a asp-action="Details" asp-route-id="@item.PracownicyID">
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-edit"></span> Details
+                        <button type="button" class="btn btn-outline-info">
+                            <span class="glyphicon glyphicon-edit"></span> Szczegóły
                         </button>
                     </a> |
                     <a asp-action="Delete" asp-route-id="@item.PracownicyID">
-                        <button type="button" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-edit"></span> Delete
+                        <button type="button" class="btn btn-outline-danger">
+                            <span class="glyphicon glyphicon-edit"></span> Usuń
                         </button>
                     </a>
                 </td>
