@@ -32,3 +32,8 @@
 ### W tym przypadkiu również możemy skorzystać z wyszukiwarki, sortowania zaznaczonego na niebiesko oraz usówania, edycji i wyświetlania szczegółowego
 
 ![Zrzut ekranu 2023-02-19 122311](https://user-images.githubusercontent.com/91785152/219944841-4121e4c3-27e3-4891-9ea1-44ee4375f4fb.png)
+
+### Projekt posiada napisane dwa testy, które wykonują się bez problemu
+
+![Zrzut ekranu 2023-02-19 122531](https://user-images.githubusercontent.com/91785152/219944961-c714c3ee-0e7e-4694-a94c-f1024d844868.png)
+
