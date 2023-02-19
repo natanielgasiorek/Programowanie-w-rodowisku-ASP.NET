@@ -19,42 +19,6 @@ namespace PrzychodniaFinal.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("PrzychodniaFinal.Models.Choroby", b =>
-                {
-                    b.Property<int>("ChorobyID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("IdChoroby")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPacjenta")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdPracownikaNavigationLekarzeID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PacjenciID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PracownicyID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PrzebiegChoroby")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ChorobyID");
-
-                    b.HasIndex("IdChoroby");
-
-                    b.HasIndex("IdPracownikaNavigationLekarzeID");
-
-                    b.HasIndex("PacjenciID");
-
-                    b.ToTable("Chorobies");
-                });
-
             modelBuilder.Entity("PrzychodniaFinal.Models.Lekarze", b =>
                 {
                     b.Property<int>("LekarzeID")
@@ -151,55 +115,28 @@ namespace PrzychodniaFinal.Migrations
                     b.ToTable("Pracownicies");
                 });
 
-            modelBuilder.Entity("PrzychodniaFinal.Models.Recepty", b =>
+            modelBuilder.Entity("PrzychodniaFinal.Models.Wizyty", b =>
                 {
-                    b.Property<int>("IdChoroby")
+                    b.Property<int>("ChorobyID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("DataWystawienia")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("DataWizyty")
+                        .HasColumnType("datetime2");
 
-                    b.Property<int>("IdRecepty")
+                    b.Property<int>("PacjentID")
                         .HasColumnType("int");
 
-                    b.Property<string>("Lek")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("PacjenciID")
+                    b.Property<int>("PracownikID")
                         .HasColumnType("int");
 
-                    b.HasKey("IdChoroby");
+                    b.Property<string>("PrzebiegChoroby")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("PacjenciID");
+                    b.HasKey("ChorobyID");
 
-                    b.ToTable("Recepties");
-                });
-
-            modelBuilder.Entity("PrzychodniaFinal.Models.Choroby", b =>
-                {
-                    b.HasOne("PrzychodniaFinal.Models.Recepty", "Id")
-                        .WithMany("Chorobies")
-                        .HasForeignKey("IdChoroby");
-
-                    b.HasOne("PrzychodniaFinal.Models.Lekarze", "IdPracownikaNavigation")
-                        .WithMany()
-                        .HasForeignKey("IdPracownikaNavigationLekarzeID");
-
-                    b.HasOne("PrzychodniaFinal.Models.Pacjenci", "IdPacjentaNavigation")
-                        .WithMany("Chorobies")
-                        .HasForeignKey("PacjenciID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Id");
-
-                    b.Navigation("IdPacjentaNavigation");
-
-                    b.Navigation("IdPracownikaNavigation");
+                    b.ToTable("Wizyties");
                 });
 
             modelBuilder.Entity("PrzychodniaFinal.Models.Pracownicy", b =>
@@ -209,25 +146,6 @@ namespace PrzychodniaFinal.Migrations
                         .HasForeignKey("LekarzeID");
 
                     b.Navigation("Lekarze");
-                });
-
-            modelBuilder.Entity("PrzychodniaFinal.Models.Recepty", b =>
-                {
-                    b.HasOne("PrzychodniaFinal.Models.Pacjenci", null)
-                        .WithMany("Recepties")
-                        .HasForeignKey("PacjenciID");
-                });
-
-            modelBuilder.Entity("PrzychodniaFinal.Models.Pacjenci", b =>
-                {
-                    b.Navigation("Chorobies");
-
-                    b.Navigation("Recepties");
-                });
-
-            modelBuilder.Entity("PrzychodniaFinal.Models.Recepty", b =>
-                {
-                    b.Navigation("Chorobies");
                 });
 #pragma warning restore 612, 618
         }
