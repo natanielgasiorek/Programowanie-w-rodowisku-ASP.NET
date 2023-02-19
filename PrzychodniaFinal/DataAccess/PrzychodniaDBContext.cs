@@ -14,9 +14,7 @@ namespace PrzychodniaFinal.DataAccess
 
         }
         public DbSet<Pacjenci> Pacjencis { get; set; }
-        public DbSet<Recepty> Recepties { get; set; }
         public DbSet<Lekarze> Lekarzes { get; set; }
-        public DbSet<Choroby> Chorobies { get; set; }
         public DbSet<Pracownicy> Pracownicies { get; set; }
 
     }
