@@ -21,3 +21,14 @@
 
 ![Zrzut ekranu 2023-02-19 120800](https://user-images.githubusercontent.com/91785152/219944206-61275f17-e2f9-4ba3-8848-2c6b23064b2a.png)
 
+## Panel pracownika:
+
+![Zrzut ekranu 2023-02-19 121956](https://user-images.githubusercontent.com/91785152/219944714-4db23d21-c7b2-41c2-ab80-295605fb6ca3.png)
+
+### Dodanie pracownika 
+
+![Zrzut ekranu 2023-02-19 122119](https://user-images.githubusercontent.com/91785152/219944768-0f9b6a8f-1c05-4431-ae75-ca74a0838a2e.png)
+
+### W tym przypadkiu również możemy skorzystać z wyszukiwarki, sortowania zaznaczonego na niebiesko oraz usówania, edycji i wyświetlania szczegółowego
+
+![Zrzut ekranu 2023-02-19 122311](https://user-images.githubusercontent.com/91785152/219944841-4121e4c3-27e3-4891-9ea1-44ee4375f4fb.png)
